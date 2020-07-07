@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thomas@gibfest.dk
-COMMENT=	Certgrinderd server. Use with py-certgrinder client.
+COMMENT=	Certgrinderd server for use with py-certgrinder client
 
 LICENSE=	BSD3CLAUSE
 
