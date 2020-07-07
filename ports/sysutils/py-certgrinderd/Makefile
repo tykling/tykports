@@ -15,4 +15,7 @@ LICENSE=	BSD3CLAUSE
 USES=		python:3.7+ # 3.7, 3.8
 USE_PYTHON=	autoplist distutils
 
+RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}yaml>=5.1.2:devel/py-yaml@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certbot@${PY_FLAVOR}
+
 .include <bsd.port.mk>

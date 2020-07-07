@@ -15,4 +15,8 @@ LICENSE=	BSD3CLAUSE
 USES=		python:3.7+ # 3.7, 3.8
 USE_PYTHON=	autoplist distutils
 
+RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}yaml>=5.1.2:devel/py-yaml@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}dnspython>=1.16.0:dns/py-dnspython@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}cryptography>2.6.1:security/py-cryptography@${PY_FLAVOR}
+
 .include <bsd.port.mk>
