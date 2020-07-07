@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	thomas@gibfest.dk
 COMMENT=	The server part of the certgrinder project. use with the 'certgrinder' client package
 
-# LICENSE=	BSD License # Ensure this is valid! See ${PORTSDIR}/Mk/bsd.licenses.db.mk.
+LICENSE=	BSD3CLAUSE
 
 USES=		python:3.7+ # 3.7, 3.8
 USE_PYTHON=	autoplist distutils
