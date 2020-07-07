@@ -8,15 +8,15 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thomas@gibfest.dk
-COMMENT=	The server part of the certgrinder project. use with the 'certgrinder' client package
+COMMENT=	Certgrinderd server. Use with py-certgrinder client.
 
 LICENSE=	BSD3CLAUSE
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certbot@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}yaml>=5.1.2:devel/py-yaml@${PY_FLAVOR}
 
 # 3.7, 3.8
 USES=		python:3.7+
 USE_PYTHON=	autoplist distutils
-
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certbot@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}yaml>=5.1.2:devel/py-yaml@${PY_FLAVOR}
 
 .include <bsd.port.mk>
