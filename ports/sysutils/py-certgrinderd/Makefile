@@ -22,8 +22,15 @@ USE_PYTHON=	autoplist distutils
 USERS=		certgrinderd
 GROUPS=		certgrinderd
 
+OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFAULT=	MANPAGES
+MANPAGES_PLIST_FILES=	share/man/man8/certgrinderd.8.gz
+
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/certgrinderd.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
 	${CAT} ${WRKSRC}/certgrinderd/certgrinderd.conf.dist >> ${STAGEDIR}${PREFIX}/etc/certgrinderd.conf.sample
+
+post-install-MANPAGES-on:
+	${INSTALL_MAN} ${WRKSRC}/man/certgrinderd.8 ${STAGEDIR}${PREFIX}/share/man/man8
 
 .include <bsd.port.mk>
