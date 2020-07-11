@@ -30,6 +30,6 @@ do-install:
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/certgrinder.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
-	${CAT} ${WRKSRC}/certgrinder.conf.dist >> ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
+	${CAT} ${WRKSRC}/certgrinder/certgrinder.conf.dist >> ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
 
 .include <bsd.port.mk>
