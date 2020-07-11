@@ -24,10 +24,8 @@ USE_PYTHON=	autoplist distutils
 USERS=		certgrinder
 GROUPS=		certgrinder
 
-do-install:
-	${MKDIR} ${STAGEDIR}${ETCDIR}
-
 post-install:
+	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_MAN} ${WRKSRC}/man/certgrinder.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
 	${CAT} ${WRKSRC}/certgrinder/certgrinder.conf.dist >> ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
 
