@@ -26,7 +26,7 @@ GROUPS=		certgrinder
 
 OPTIONS_DEFINE=	MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
-MANPAGES_PLIST_FILES=	share/man/man8/certgrinder.8
+MANPAGES_PLIST_FILES=	share/man/man8/certgrinder.8.gz
 
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
