@@ -24,6 +24,6 @@ USE_PYTHON=	autoplist distutils
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/certgrinderd.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
-	${CAT} ${WRKSRC}/certgrinderd/certgrinderd.conf.dist >> ${STAGEDIR}etc/certgrinderd.conf.sample
+	${CAT} ${WRKSRC}/certgrinderd/certgrinderd.conf.dist >> ${STAGEDIR}${PREFIX}/etc/certgrinderd.conf.sample
 
 .include <bsd.port.mk>
