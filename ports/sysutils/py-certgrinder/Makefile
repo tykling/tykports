@@ -24,9 +24,9 @@ USE_PYTHON=	autoplist distutils
 USERS=		certgrinder
 GROUPS=		certgrinder
 
-PLIST_FILES=    "@sample ${ETCDIR}/certgrinder.conf.sample"
+PLIST_FILES=	"@sample ${ETCDIR}/certgrinder.conf.sample"
 
-OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 MANPAGES_PLIST_FILES=	share/man/man8/certgrinder.8.gz
 
