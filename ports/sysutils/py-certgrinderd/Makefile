@@ -22,12 +22,14 @@ USE_PYTHON=	autoplist distutils
 USERS=		certgrinderd
 GROUPS=		certgrinderd
 
+PLIST_FILES=    "@sample etc/certgrinderd.conf.sample"
+
 OPTIONS_DEFINE=	MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 MANPAGES_PLIST_FILES=	share/man/man8/certgrinderd.8.gz
 
 post-install:
-	${CAT} ${WRKSRC}/certgrinderd/certgrinderd.conf.dist >> ${STAGEDIR}${PREFIX}/etc/certgrinderd.conf.sample
+	${CP} ${WRKSRC}/certgrinderd/certgrinderd.conf.dist ${STAGEDIR}${PREFIX}/etc/certgrinderd.conf.sample
 
 post-install-MANPAGES-on:
 	${INSTALL_MAN} ${WRKSRC}/man/certgrinderd.8 ${STAGEDIR}${PREFIX}/share/man/man8
