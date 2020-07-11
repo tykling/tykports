@@ -12,8 +12,8 @@ COMMENT=	Certgrinderd server for use with py-certgrinder client
 
 LICENSE=	BSD3CLAUSE
 
-USERS=	certgrinderd
-GROUPS=	certgrinderd
+USERS=		certgrinderd
+GROUPS=		certgrinderd
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certbot@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.1.2:devel/py-yaml@${PY_FLAVOR}

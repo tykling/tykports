@@ -12,8 +12,8 @@ COMMENT=	Certgrinder client for use with py-certgrinderd server
 
 LICENSE=	BSD3CLAUSE
 
-USERS=	certgrinder
-GROUPS=	certgrinder
+USERS=		certgrinder
+GROUPS=		certgrinder
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=2.6.1:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dnspython>=1.16.0:dns/py-dnspython@${PY_FLAVOR} \
