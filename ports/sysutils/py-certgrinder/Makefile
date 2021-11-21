@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	certgrinder
-PORTVERSION=	0.13.2
+PORTVERSION=	0.17.0
 CATEGORIES=	sysutils
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=2.6.1:security/py-cryptography
 		${PYTHON_PKGNAMEPREFIX}pid>=2.2.3:devel/py-pid@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.1.2:devel/py-yaml@${PY_FLAVOR}
 
-# 3.7, 3.8
+# 3.7, 3.8, 3.9
 USES=		python:3.7+
 USE_PYTHON=	autoplist distutils
 
