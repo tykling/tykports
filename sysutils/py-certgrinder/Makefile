@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	certgrinder
-PORTVERSION=	0.17.1
-CATEGORIES=	sysutils
+PORTVERSION=	0.17.2
+CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,6 +11,7 @@ MAINTAINER=	thomas@gibfest.dk
 COMMENT=	Certgrinder client for use with py-certgrinderd server
 
 LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=3.3.2:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dnspython>=1.16.0:dns/py-dnspython@${PY_FLAVOR} \
@@ -19,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=3.3.2:security/py-cryptography
 
 # 3.7, 3.8, 3.9, 3.10
 USES=		python:3.7+
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist distutils concurrent
 
 USERS=		certgrinder
 GROUPS=		certgrinder

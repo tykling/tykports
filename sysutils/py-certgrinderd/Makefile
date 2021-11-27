@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	certgrinderd
-PORTVERSION=	0.17.1
-CATEGORIES=	sysutils
+PORTVERSION=	0.17.2
+CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,6 +11,7 @@ MAINTAINER=	thomas@gibfest.dk
 COMMENT=	Certgrinderd server for use with py-certgrinder client
 
 LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certbot@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.4.1:devel/py-yaml@${PY_FLAVOR}
