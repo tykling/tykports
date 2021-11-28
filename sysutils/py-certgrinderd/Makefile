@@ -3,12 +3,13 @@
 
 PORTNAME=	certgrinderd
 PORTVERSION=	0.17.2
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thomas@gibfest.dk
-COMMENT=	Certgrinderd server for use with py-certgrinder client
+COMMENT=	Server for getting LetsEncrypt certificates for Certgrinder clients
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -18,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certb
 
 # 3.7, 3.8, 3.9, 3.10
 USES=		python:3.7+
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist distutils concurrent
 
 USERS=		certgrinderd
 GROUPS=		certgrinderd
