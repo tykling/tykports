@@ -3,7 +3,7 @@
 
 PORTNAME=	certgrinder
 PORTVERSION=	0.17.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,10 +26,10 @@ USE_PYTHON=	autoplist distutils concurrent
 USERS=		certgrinder
 GROUPS=		certgrinder
 
-PLIST_FILES=	"@sample ${ETCDIR}/certgrinder.conf.sample \
-		@dir ${ETCDIR} \
-		@dir ${ETCDIR}/hooks.d \
-		@dir ${ETCDIR}/certificates"
+PLIST_FILES=	"@sample ${ETCDIR}/certgrinder.conf.sample" \
+		"@dir ${ETCDIR}" \
+		"@dir ${ETCDIR}/hooks.d" \
+		"@dir ${ETCDIR}/certificates"
 
 OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
