@@ -35,11 +35,13 @@ OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 MANPAGES_PLIST_FILES=	share/man/man8/certgrinder.8.gz
 
+do-install:
+	${INSTALL} -d -o certgrinder -g certgrinder ${STAGEDIR}${ETCDIR}
+	${INSTALL} -d -o certgrinder -g certgrinder ${STAGEDIR}${ETCDIR}/hooks.d
+	${INSTALL} -d -o certgrinder -g certgrinder -m 0750 ${STAGEDIR}${ETCDIR}/certificates
+
 post-install:
-	${MKDIR} ${STAGEDIR}${ETCDIR}
-	${MKDIR} ${STAGEDIR}${ETCDIR}/hooks.d
-	${MKDIR} ${STAGEDIR}${ETCDIR}/certificates
-	${CP} ${WRKSRC}/certgrinder/certgrinder.conf.dist ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/certgrinder/certgrinder.conf.dist ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
 
 post-install-MANPAGES-on:
 	${INSTALL_MAN} ${WRKSRC}/man/certgrinder.8 ${STAGEDIR}${PREFIX}/share/man/man8
