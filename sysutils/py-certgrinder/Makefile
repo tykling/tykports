@@ -3,7 +3,7 @@
 
 PORTNAME=	certgrinder
 PORTVERSION=	0.17.2
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -39,7 +39,7 @@ post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${MKDIR} ${STAGEDIR}${ETCDIR}/hooks.d
 	${MKDIR} ${STAGEDIR}${ETCDIR}/certificates
-	${RLN} ${STAGEDIR}/etc/${PORTNAME} ${STAGEDIR}${ETCDIR}
+	${RLN} ${STAGEDIR}${ETCDIR} ${STAGEDIR}/etc/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/certgrinder/certgrinder.conf.dist ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
 
 post-install-MANPAGES-on:
