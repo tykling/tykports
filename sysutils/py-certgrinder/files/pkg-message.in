@@ -4,7 +4,3 @@ To configure it you have to copy the sample config at
 %%ETCDIR%%/certgrinder.conf.sample to
 %%ETCDIR%%/certgrinder.conf and edit it to your liking.
 
-You can also create a %%LOCALBASE%%/etc/certgrinder symlink
-to %%ETCDIR%% and use that in configs so a future Python
-version change does not change certificate paths.
-

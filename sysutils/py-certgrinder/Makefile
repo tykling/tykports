@@ -23,6 +23,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=3.3.2:security/py-cryptography
 USES=		python:3.7+
 USE_PYTHON=	autoplist distutils concurrent
 
+ETCDIR=		${PREFIX}/etc/certgrinder
+
 USERS=		certgrinder
 GROUPS=		certgrinder
 
