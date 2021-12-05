@@ -3,7 +3,7 @@
 
 PORTNAME=	certgrinder
 PORTVERSION=	0.17.2
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,7 +26,7 @@ USE_PYTHON=	autoplist distutils concurrent
 USERS=		certgrinder
 GROUPS=		certgrinder
 
-PLIST_FILES=	"@sample ${ETCDIR}/certgrinder.conf.sample" \
+PLIST_FILES=	"${ETCDIR}/certgrinder.conf.sample" \
 		"@dir(certgrinder,certgrinder,755) ${ETCDIR}" \
 		"@dir(certgrinder,certgrinder,755) ${ETCDIR}/hooks.d" \
 		"@dir(certgrinder,certgrinder,750) ${ETCDIR}/certificates"
@@ -39,6 +39,7 @@ post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${MKDIR} ${STAGEDIR}${ETCDIR}/hooks.d
 	${MKDIR} ${STAGEDIR}${ETCDIR}/certificates
+	${RLN} ${STAGEDIR}/etc/${PORTNAME} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/certgrinder/certgrinder.conf.dist ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
 
 post-install-MANPAGES-on:
