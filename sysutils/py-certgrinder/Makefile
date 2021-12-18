@@ -3,7 +3,7 @@
 
 PORTNAME=	certgrinder
 PORTVERSION=	0.17.2
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,19 +29,21 @@ GROUPS=		certgrinder
 PLIST_FILES=	"${ETCDIR}/certgrinder.conf.sample" \
 		"@dir(certgrinder,certgrinder,755) ${ETCDIR}" \
 		"@dir(certgrinder,certgrinder,755) ${ETCDIR}/hooks.d" \
-		"@dir(certgrinder,certgrinder,750) ${ETCDIR}/certificates"
+		"@dir(certgrinder,certgrinder,750) ${ETCDIR}/certificates" \
+		"@dir(certgrinder,certgrinder,700) ${ETCDIR}/.ssh"
 
 OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 MANPAGES_PLIST_FILES=	share/man/man8/certgrinder.8.gz
 
 SUB_FILES=      pkg-message
-SUB_LIST=       ETCDIR=${ETCDIR}
+SUB_LIST=       ETCDIR=${ETCDIR} PORTVERSION=${PORTVERSION}
 
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${MKDIR} ${STAGEDIR}${ETCDIR}/hooks.d
 	${MKDIR} ${STAGEDIR}${ETCDIR}/certificates
+	${MKDIR} ${STAGEDIR}${ETCDIR}/.ssh
 	${INSTALL_DATA} ${WRKSRC}/certgrinder/certgrinder.conf.dist ${STAGEDIR}${ETCDIR}/certgrinder.conf.sample
 
 post-install-MANPAGES-on:
