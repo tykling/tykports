@@ -3,7 +3,7 @@
 
 PORTNAME=	certgrinder
 PORTVERSION=	0.17.2
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,9 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=3.3.2:security/py-cryptography
 
 # 3.7, 3.8, 3.9, 3.10
 USES=		python:3.7+
-USE_PYTHON=	autoplist distutils concurrent
-
-ETCDIR=		${PREFIX}/etc/certgrinder
+USE_PYTHON=	autoplist distutils
 
 USERS=		certgrinder
 GROUPS=		certgrinder

@@ -4,3 +4,6 @@ To configure it you have to copy the sample config at
 %%ETCDIR%%/certgrinder.conf.sample to
 %%ETCDIR%%/certgrinder.conf and edit it to your liking.
 
+Keys, certificates and OCSP responses will be put in
+%%ETCDIR%%/certificates/ and you can place hooks in
+%%ETCDIR%%/hooks.d/
