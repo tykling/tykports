@@ -1,13 +1,13 @@
-The Certgrinder client (version %%PORTVERSION%%) has been installed!
+The Certgrinder client v%%PORTVERSION%% has been installed!
 
 To configure it you have to copy the sample config at
 %%ETCDIR%%/certgrinder.conf.sample to
-%%ETCDIR%%/certgrinder.conf and edit it to your liking.
+%%ETCDIR%%/certgrinder.conf and edit it.
 
 Certgrinder needs an SSH keypair in %%ETCDIR%%/.ssh/
 You can copy an existing keypair or generate a new one:
-ssh-keygen -t ed25519 -f /usr/local/etc/certgrinder/.ssh/id_ed25519 -N ""
+sudo -u certgrinder ssh-keygen -t ed25519 -N ""
 
 Keys, certificates and OCSP responses will be put in
-%%ETCDIR%%/certificates/ and you can place hooks in
+%%ETCDIR%%/certificates/ and you can place executable hooks in
 %%ETCDIR%%/hooks.d/
