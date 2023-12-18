@@ -1,3 +1,3 @@
-TIMESTAMP = 1702928812
-SHA256 (pfctl_exporter-0.4.0.tar.gz) = d24dcf4b17d7322b35a6ba7617fc59561deeeef5a6ebd1a6a2f4d64dad60e7b1
-SIZE (pfctl_exporter-0.4.0.tar.gz) = 10055
+TIMESTAMP = 1702940184
+SHA256 (pfctl_exporter-0.5.0.tar.gz) = 9fd34540f764ef483ed56f3d633b6bb2b2ea4fbc3811a089c51ea590890402af
+SIZE (pfctl_exporter-0.5.0.tar.gz) = 11562
