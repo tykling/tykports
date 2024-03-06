@@ -3,7 +3,7 @@
 
 PORTNAME=	dns_exporter
 DISTVERSION=	1.0.0rc1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	dns python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,7 +27,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}prometheus-client>=0.17.1:net-mgmt/py-promet
 USES=		python:3.9+
 USE_PYTHON=	autoplist pep517
 
-PLIST_FILES=	"${ETCDIR}/dns_exporter.yml.sample"
+ETCDIR="${PREFIX}/etc"
+
+PLIST_FILES=	"@sample ${ETCDIR}/dns_exporter.yml.sample"
 
 SUB_FILES=      pkg-message
 SUB_LIST=       ETCDIR=${ETCDIR} PORTVERSION=${PORTVERSION}
