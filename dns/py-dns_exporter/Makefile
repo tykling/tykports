@@ -3,7 +3,7 @@
 
 PORTNAME=	dns_exporter
 DISTVERSION=	1.0.0rc1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dns python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -33,7 +33,7 @@ SUB_FILES=      pkg-message
 SUB_LIST=       ETCDIR=${ETCDIR} PORTVERSION=${PORTVERSION}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/dns_exporter/dns_exporter_example.yml ${STAGEDIR}${ETCDIR}/dns_exporter.yml.sample
+	${INSTALL_DATA} ${WRKSRC}/src/dns_exporter/dns_exporter_example.yml ${STAGEDIR}${ETCDIR}/dns_exporter.yml.sample
 
 
 .include <bsd.port.mk>
