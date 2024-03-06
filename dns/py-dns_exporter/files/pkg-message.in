@@ -1,0 +1,9 @@
+The dns_exporter v%%PORTVERSION%% has been installed!
+
+It is possible to use dns_exporter for simple lookups
+without a config file, but for response validation you
+need a config file.
+
+To create a config file you can copy the sample config at
+%%ETCDIR%%/dns_exporter.yml.sample to 
+%%ETCDIR%%/dns_exporter.yml and edit it as needed.
