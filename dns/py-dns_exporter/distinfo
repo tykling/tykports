@@ -1,3 +1,3 @@
-TIMESTAMP = 1709709865
-SHA256 (dns_exporter-1.0.0rc1.tar.gz) = 79ffbba023eb0868d60f828811105b669cf4a23cf0ef498cef487a12d492a6f1
-SIZE (dns_exporter-1.0.0rc1.tar.gz) = 57549
+TIMESTAMP = 1709730972
+SHA256 (dns_exporter-1.0.0rc2.tar.gz) = ff14ea8a08e7a5ddbd64dc29b3496a30432dadfe1ca8167e4413ee3bebfc06a6
+SIZE (dns_exporter-1.0.0rc2.tar.gz) = 57698
