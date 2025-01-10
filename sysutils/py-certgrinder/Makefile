@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	certgrinder
-PORTVERSION=	0.19.2
-PORTREVISION=	3
+PORTVERSION=	0.20.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=42.0.5,1_1:security/py-cryptog
 		${PYTHON_PKGNAMEPREFIX}pid>=3.0.4:devel/py-pid@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>=6.0:devel/py-pyyaml@${PY_FLAVOR}
 
-USES=		python:3.8+
+USES=		python:3.10+
 USE_PYTHON=	autoplist pep517
 
 USERS=		certgrinder

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	certgrinderd
-PORTVERSION=	0.19.2
-PORTREVISION=	2
+PORTVERSION=	0.20.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,7 +20,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAV
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certbot@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>=6.0:devel/py-pyyaml@${PY_FLAVOR}
 
-USES=		python:3.8+
+USES=		python:3.10+
 USE_PYTHON=	autoplist pep517
 
 USERS=		certgrinderd
