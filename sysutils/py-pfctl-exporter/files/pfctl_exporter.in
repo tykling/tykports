@@ -24,6 +24,6 @@ pfct_exporter_flags="-l 127.0.0.1"
 pidfile=/var/run/${name}.pid
 command_interpreter=%%PYTHON_CMD%%
 command=%%PREFIX%%/bin/pfctl-exporter
-start_cmd="/usr/sbin/daemon -f -p ${pidfile} $command_interpreter $command"
+start_cmd="/usr/sbin/daemon -S -p ${pidfile} $command_interpreter $command"
 
 run_rc_command "$1"

@@ -20,6 +20,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAV
 
 RUN_DEPENDS=   ${PYTHON_PKGNAMEPREFIX}prometheus-client>=0.17.1:net-mgmt/py-prometheus-client@${PY_FLAVOR}
 
+SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}
 USES=		python:3.9+
 USE_PYTHON=	autoplist pep517
 USE_RC_SUBR=	pfctl_exporter
