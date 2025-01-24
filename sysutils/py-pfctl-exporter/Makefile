@@ -10,7 +10,6 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thomas@gibfest.dk
 COMMENT=	Prometheus exporter for the pf firewall using pfctl(8) data
-WWW=	https://github.com/tykling/pfctl_exporter
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
