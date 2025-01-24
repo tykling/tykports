@@ -19,7 +19,7 @@ load_rc_config $name
 
 : ${pfctl_exporter_enable:="NO"}
 
-command=%%PREFIX%%/bin/${name}
+command=%%PREFIX%%/bin/pfctl-exporter
 pidfile=/var/run/${name}.pid
 
 pfct_exporter_flags="-l 127.0.0.1"
