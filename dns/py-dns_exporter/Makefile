@@ -25,13 +25,14 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}prometheus-client>=0.17.1:net-mgmt/py-promet
 
 USES=		python:3.9+
 USE_PYTHON=	autoplist pep517
+USE_RC_SUBR=	dns_exporter
 
 ETCDIR="${PREFIX}/etc"
 
 PLIST_FILES=	"@sample ${ETCDIR}/dns_exporter.yml.sample"
 
 SUB_FILES=      pkg-message
-SUB_LIST=       ETCDIR=${ETCDIR} PORTVERSION=${PORTVERSION}
+SUB_LIST=       ETCDIR=${ETCDIR} PORTVERSION=${PORTVERSION} PYTHON_CMD=${PYTHON_CMD}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/dns_exporter/dns_exporter_example.yml ${STAGEDIR}${ETCDIR}/dns_exporter.yml.sample

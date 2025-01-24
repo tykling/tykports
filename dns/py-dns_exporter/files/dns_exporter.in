@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# PROVIDE: dns_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# dns_exporter_enable (bool):	Set to NO by default.
+#				Set to YES to enable dns_exporter.
+
+. /etc/rc.subr
+
+name=dns_exporter
+rcvar=dns_exporter_enable
+desc="dns-exporter daemon"
+
+load_rc_config $name
+
+: ${dns_exporter_enable:=NO}
+: ${dns_exporter_user:=nobody}
+dns_exporter_flags="-L 127.0.0.1"
+
+pidfile=/var/run/${name}.pid
+command_interpreter=%%PYTHON_CMD%%
+command=%%PREFIX%%/bin/dns-exporter
+start_cmd="/usr/sbin/daemon -S -p ${pidfile} $command_interpreter $command $dns_exporter_flags"
+
+run_rc_command "$1"
