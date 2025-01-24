@@ -19,7 +19,7 @@ desc="pfctl-exporter daemon"
 load_rc_config $name
 
 : ${pfctl_exporter_enable:=NO}
-pfct_exporter_flags="-l 127.0.0.1"
+pfctl_exporter_flags="-l 127.0.0.1"
 
 pidfile=/var/run/${name}.pid
 command_interpreter=%%PYTHON_CMD%%
