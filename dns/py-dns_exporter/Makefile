@@ -9,7 +9,7 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thomas@gibfest.dk
-COMMENT=	Multi-target Prometheus exporter focused on DNS monitoring.
+COMMENT=	Multi-target Prometheus exporter focused on DNS monitoring
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
