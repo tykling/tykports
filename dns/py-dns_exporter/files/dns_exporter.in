@@ -22,9 +22,14 @@ load_rc_config $name
 : ${dns_exporter_user:=nobody}
 dns_exporter_flags="-L 127.0.0.1"
 
-pidfile=/var/run/${name}.pid
+pidfile=/var/run/${name}/${name}.pid
 command_interpreter=%%PYTHON_CMD%%
 command=%%PREFIX%%/bin/${name}
 start_cmd="/usr/sbin/daemon -S -p ${pidfile} $command_interpreter $command $dns_exporter_flags"
+
+dns_exporter_precmd()
+{
+    install -d -o $dns_exporter_user /var/run/${name}/
+}
 
 run_rc_command "$1"
