@@ -9,8 +9,7 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thomas@gibfest.dk
-COMMENT=	A multi-target Prometheus exporter with an exclusive focus on DNS monitoring.
-WWW=	https://github.com/tykling/dns_exporter
+COMMENT=	Multi-target Prometheus exporter focused on DNS monitoring.
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -36,6 +35,5 @@ SUB_LIST=       ETCDIR=${ETCDIR} PORTVERSION=${PORTVERSION}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/dns_exporter/dns_exporter_example.yml ${STAGEDIR}${ETCDIR}/dns_exporter.yml.sample
-
 
 .include <bsd.port.mk>
