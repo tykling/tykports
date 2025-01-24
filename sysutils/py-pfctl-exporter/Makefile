@@ -22,5 +22,6 @@ RUN_DEPENDS=   ${PYTHON_PKGNAMEPREFIX}prometheus-client>=0.17.1:net-mgmt/py-prom
 
 USES=		python:3.9+
 USE_PYTHON=	autoplist pep517
+USE_RC_SUBR=	pfctl_exporter
 
 .include <bsd.port.mk>
