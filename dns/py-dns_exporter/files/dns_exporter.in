@@ -26,6 +26,7 @@ pidfile=/var/run/${name}/${name}.pid
 command_interpreter=%%PYTHON_CMD%%
 command=%%PREFIX%%/bin/${name}
 start_cmd="/usr/sbin/daemon -S -p ${pidfile} $command_interpreter $command $dns_exporter_flags"
+start_precmd="dns_exporter_precmd"
 
 dns_exporter_precmd()
 {
