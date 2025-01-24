@@ -24,7 +24,7 @@ dns_exporter_flags="-L 127.0.0.1"
 
 pidfile=/var/run/${name}.pid
 command_interpreter=%%PYTHON_CMD%%
-command=%%PREFIX%%/bin/dns-exporter
+command=%%PREFIX%%/bin/${name}
 start_cmd="/usr/sbin/daemon -S -p ${pidfile} $command_interpreter $command $dns_exporter_flags"
 
 run_rc_command "$1"
