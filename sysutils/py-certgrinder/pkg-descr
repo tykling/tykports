@@ -1,0 +1,22 @@
+# Certgrinder client: certgrinder
+
+This is the client part of the Certgrinder project.
+
+Certgrinder is a set of Python scripts to handle Letsencrypt certificate
+signing on a central host (the Certgrinder server), rather than on the
+machines which need the certificates (the Certgrinder clients). This is
+accomplished by redirecting the LetsEncrypt challenge to the Certgrinder
+server. For DNS-01 challenges this is done with a CNAME record and for
+HTTP-01 challenges it is done with a HTTP 301 redirect.
+
+Certgrinder clients calls the Certgrinderd server (typically over SSH)
+with a CSR on stdin and (if all goes well) get a signed certificate on
+stdout.
+
+This approach simplifies getting certificates in loadbalanced, anycast or
+network restricted environments. It can also help when migrating
+services, since it is possible to issue certificates to the new servers
+before changing DNS.
+
+WWW: https://certgrinder.readthedocs.io/en/latest/introduction.html
+WWW: https://github.com/tykling/certgrinder
