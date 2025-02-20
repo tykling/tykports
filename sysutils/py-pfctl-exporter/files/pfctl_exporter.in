@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# PROVIDE: pfctl_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# pfctl_exporter_enable (bool):	Set to NO by default.
+#				Set to YES to enable pfctl_exporter.
+
+. /etc/rc.subr
+
+name=pfctl_exporter
+rcvar=pfctl_exporter_enable
+desc="pfctl-exporter daemon"
+
+load_rc_config $name
+
+: ${pfctl_exporter_enable:=NO}
+pfctl_exporter_flags="-l 127.0.0.1"
+
+pidfile=/var/run/${name}.pid
+command_interpreter=%%PYTHON_CMD%%
+command=%%PREFIX%%/bin/pfctl-exporter
+start_cmd="/usr/sbin/daemon -S -p ${pidfile} $command_interpreter $command $pfctl_exporter_flags"
+
+run_rc_command "$1"

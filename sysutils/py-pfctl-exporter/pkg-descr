@@ -1,0 +1,4 @@
+# Prometheus pfctl Exporter
+
+pfctl_exporter is a Prometheus exporter for the pf firewall. It uses
+the pfctl(8) tool to extract data.
