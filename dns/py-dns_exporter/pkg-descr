@@ -1,0 +1,3 @@
+# Prometheus dns_exporter
+dns_exporter is a multi-target Prometheus exporter with an exclusive
+focus on DNS monitoring. It uses dnspython to talk to DNS servers.
