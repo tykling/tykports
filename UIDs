@@ -1,1 +1,2 @@
+certgrinderd:*:508:508::0:0:Certgrinderd user:/usr/local/etc/certgrinderd:/bin/sh
 certgrinder:*:509:509::0:0:Certgrinder user:/usr/local/etc/certgrinder:/usr/sbin/nologin
